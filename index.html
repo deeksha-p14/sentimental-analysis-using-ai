@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Sentiment Analysis — AI-Powered Text Analysis</title>
+    <meta name="description" content="Classify text into Positive, Negative or Neutral sentiment with confidence scores, probability breakdown and key indicators powered by Google Gemini AI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored ? stored : (systemDark ? 'dark' : 'light');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            var meta = document.querySelector('meta[name="color-scheme"]');
+            if (meta) meta.setAttribute('content', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            var meta = document.querySelector('meta[name="color-scheme"]');
+            if (meta) meta.setAttribute('content', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-[#fafafc] text-neutral-900 antialiased transition-colors duration-200 dark:bg-[#0c0e14] dark:text-neutral-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
