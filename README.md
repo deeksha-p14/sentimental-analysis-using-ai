@@ -16,28 +16,4 @@ A minimalist, single-page AI Sentiment Analysis web application powered by Googl
 - **Strictly Single-Page**: No sidebars, no multi-page routing, no login walls.
 - **Secure Backend**: Google Gemini API key is securely managed on the server (`GEMINI_API_KEY`) and never exposed to the frontend bundle.
 
-## Quick Start
 
-### 1. Set your Gemini API Key
-
-Add your Gemini API key to `.env` in this directory:
-```bash
-GEMINI_API_KEY=your_actual_gemini_api_key
-```
-
-### 2. Run the Application
-
-```bash
-# In sentiment-analysis directory:
-npm run dev
-```
-
-The application will be accessible at:
-- Frontend & API: **http://localhost:3001** (or `http://localhost:5173` in Vite client dev mode)
-
-### 3. Build for Production
-
-```bash
-npm run build
-npm start
-```
